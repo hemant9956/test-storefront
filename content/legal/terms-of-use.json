@@ -1,0 +1,167 @@
+{
+  "kind": "terms",
+  "title": "Terms of Use",
+  "eyebrow": "Please read these terms",
+  "intro": "Welcome to {{shopName}}. These Terms of Use (“Terms”) govern your access to and use of this website and any purchase made through it. By accessing or using the website, placing an order, or creating an account, you agree to be bound by these terms.",
+  "contentsLabel": "On this page",
+  "lastUpdated": "{{lastUpdated}}",
+  "sections": [
+    {
+      "id": "about-us",
+      "label": "About Us",
+      "title": "About Us",
+      "theme": "plain",
+      "intro": "{{shopName}} is an inventory-based e-commerce entity. All products listed and sold on this website are sold directly by us. We are not a marketplace hosting third-party sellers.",
+      "listStyle": "divided",
+      "items": [
+        { "title": "Business Address", "text": "{{address}}" },
+        { "title": "Contact Email", "text": "{{contactEmail}}", "href": "mailto:{{contactEmail}}" },
+        { "title": "Contact Phone", "text": "{{contactPhone}}", "href": "tel:{{contactPhone}}" }
+      ]
+    },
+    {
+      "id": "account-registration",
+      "label": "Account Registration",
+      "title": "Account Registration",
+      "theme": "highlighted",
+      "intro": "You may be required to create an account to place orders or access certain features. You are responsible for:",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Maintaining the confidentiality of your login credentials." },
+        { "text": "All activities that occur under your account." },
+        { "text": "Notifying us immediately at {{contactEmail}} of any unauthorized use of your account." }
+      ]
+    },
+    {
+      "id": "products-pricing",
+      "label": "Products & Pricing",
+      "title": "Products, Pricing & Availability",
+      "theme": "plain",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "All prices listed on the website are in Indian Rupees (INR) and are inclusive of applicable taxes unless stated otherwise." },
+        { "text": "We display the total price along with a breakup of any additional charges before you complete checkout." },
+        { "text": "Product images are for representational purposes. Actual colour may differ slightly from what is shown." },
+        { "text": "We reserve the right to limit quantities, refuse, or cancel orders, including in cases of pricing errors, suspected fraud, or stock unavailability. Prepaid cancellations by us are refunded in full." }
+      ]
+    },
+    {
+      "id": "order-placement",
+      "label": "Order Placement",
+      "title": "Order Placement & Acceptance",
+      "theme": "highlighted",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Placing an order constitutes an offer to purchase. An order is confirmed only once you receive an order confirmation email/SMS from us." },
+        { "text": "We do not record consent using pre-ticked checkboxes; all consent given during checkout is explicit and affirmative." },
+        { "text": "For Cash on Delivery (COD) orders, we may verify your contact number before dispatch and cancel orders that fail verification." }
+      ]
+    },
+    {
+      "id": "cancellations",
+      "label": "Cancellations",
+      "title": "Cancellations",
+      "theme": "plain",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Orders can be cancelled free of charge before they are shipped by writing to {{contactEmail}} or via your account dashboard." },
+        { "text": "Once an order is shipped, it cannot be cancelled; you may initiate a return after delivery." }
+      ]
+    },
+    {
+      "id": "shipping-delivery",
+      "label": "Shipping & Delivery",
+      "title": "Shipping & Delivery",
+      "theme": "highlighted",
+      "intro": "We ship across serviceable locations in India through our logistics partners. Shipping charges, if any, are shown at checkout. Estimated delivery timelines are indicative only."
+    },
+    {
+      "id": "returns-refunds",
+      "label": "Returns & Refunds",
+      "title": "Returns, Refunds & Exchanges",
+      "theme": "plain",
+      "intro": "Buyers may initiate a return request within {{returnWindowDays}} days of delivery. Full details are on our Returns & Refunds page.",
+      "items": [
+        { "text": "See the Returns & Refunds Policy for eligibility, pickup charges, and refund timelines.", "href": "{{returnsHref}}" }
+      ]
+    },
+    {
+      "id": "intellectual-property",
+      "label": "Intellectual Property",
+      "title": "Intellectual Property",
+      "theme": "highlighted",
+      "intro": "All content on this website, including the {{shopName}} logo, brand name, product photography, graphics, text, and design, is owned by us and protected under applicable Indian intellectual property laws."
+    },
+    {
+      "id": "acceptable-use",
+      "label": "Acceptable Use",
+      "title": "Acceptable Use",
+      "theme": "plain",
+      "intro": "You agree NOT to:",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Use the website for any unlawful purpose or in violation of these Terms." },
+        { "text": "Attempt to gain unauthorized access to our systems, servers, or another user's account." },
+        { "text": "Upload or transmit any content that is defamatory, obscene, infringing, or harmful." },
+        { "text": "Use automated tools (bots, scrapers) to extract data from the website without our permission." },
+        { "text": "Post fake reviews or misrepresent yourself as a different consumer." }
+      ]
+    },
+    {
+      "id": "reviews-user-content",
+      "label": "Reviews",
+      "title": "Reviews & User Content",
+      "theme": "highlighted",
+      "intro": "If you submit a product review or other content, you grant us a non-exclusive, royalty-free right to use, reproduce, and display that content for marketing and website purposes."
+    },
+    {
+      "id": "limitation-of-liability",
+      "label": "Limitation of Liability",
+      "title": "Limitation of Liability",
+      "theme": "plain",
+      "intro": "To the maximum extent permitted by law, {{shopName}} shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the website, except where such liability arises from our own deficiency as recognized under the Consumer Protection Act, 2019. Our total liability for any claim related to your order shall not exceed the amount you paid for that order."
+    },
+    {
+      "id": "indemnity",
+      "label": "Indemnity",
+      "title": "Indemnity",
+      "theme": "highlighted",
+      "intro": "You agree to indemnify and hold harmless {{shopName}} from any claims arising out of your breach of these Terms or your misuse of the website."
+    },
+    {
+      "id": "care-instructions",
+      "label": "Care Instructions",
+      "title": "Care Instructions Disclaimer",
+      "theme": "plain",
+      "intro": "Unless otherwise specified on the product label or product page, follow the care instructions provided with each product. We are not liable for damage caused by improper care."
+    },
+    {
+      "id": "grievance-redressal",
+      "label": "Grievance Redressal",
+      "title": "Grievance Redressal",
+      "theme": "highlighted",
+      "intro": "In accordance with the Consumer Protection (E-Commerce) Rules, 2020, complaints will be acknowledged within 48 hours and resolved at the earliest. Grievance Email: {{contactEmail}}."
+    },
+    {
+      "id": "changes-to-terms",
+      "label": "Changes",
+      "title": "Changes to These Terms",
+      "theme": "plain",
+      "intro": "We may revise these Terms from time to time. Continued use of the website after changes are posted constitutes acceptance of the revised Terms."
+    },
+    {
+      "id": "governing-law",
+      "label": "Governing Law",
+      "title": "Governing Law & Jurisdiction",
+      "theme": "highlighted",
+      "intro": "These Terms shall be governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of the courts of India, unless a more specific jurisdiction is stated on this page."
+    },
+    {
+      "id": "contact-us",
+      "label": "Contact Us",
+      "title": "Contact Us",
+      "theme": "plain",
+      "intro": "For any questions regarding these Terms, please contact {{shopName}}."
+    }
+  ]
+}

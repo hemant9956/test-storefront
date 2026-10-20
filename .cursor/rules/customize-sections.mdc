@@ -1,0 +1,55 @@
+---
+description: Add, remove, or reorder homepage and page segments
+globs: pages.config.json,package.json
+alwaysApply: false
+---
+
+# Customize sections
+
+Sections are **npm segment packages** wired in `pages.config.json`.
+
+## Home page (`route: "/"`)
+
+Each entry in `segments` renders top-to-bottom:
+
+```json
+"segments": [
+  "@pradip1995/segment-hero",
+  "@pradip1995/segment-shop-by-category",
+  "@pradip1995/segment-new-arrivals"
+]
+```
+
+**Reorder / add / remove sections** — edit `pages.config.json`, then:
+
+```bash
+npm run storefront:build
+```
+
+This regenerates the Next.js app. Add per-segment `data` in `pages.config.json` for copy and images (see segment `builder.settings.json`).
+
+**Remove** — delete the line and remove the package from `package.json` if unused elsewhere.
+
+**Add** — see command `add-home-segment` or skill `update-storefront-sections`.
+
+## Other routes
+
+| Route | Typical segments |
+|-------|------------------|
+| `/store` | mobile-filters, refinement-list, product-grid |
+| `/products/[handle]` | product-gallery, product-info, product-actions, related-products |
+| `/cart` | cart-item, cart-summary |
+| `/checkout` | checkout-form, checkout-summary |
+
+## After changing segments
+
+1. Add dep to `package.json`: `"@pradip1995/segment-foo": "^0.2.2"`
+2. Run `npm install`
+3. Update `pages.config.json`
+4. Run `npm run storefront:build`
+
+Build log lists segment count — verify your new segment appears.
+
+## Segment data
+
+Each segment receives props from its route **workflow** (e.g. `workflow-home` loads hero, categories, products). If a segment renders empty, the workflow may not supply its data key — check Medusa backend + publishable key first.

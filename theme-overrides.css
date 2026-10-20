@@ -1,0 +1,1438 @@
+/**
+ * Lumière Beauty — cosmetics theme inspired by premium beauty retailers.
+ * Overrides @pradip1995/segment-tokens/themes/impulse.css
+ */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+
+/*
+ * html:root beats impulse.css :root even when the bundler emits impulse later.
+ * !important on custom props beats page-level segment CSS (jewelry-nav, etc.).
+ */
+html:root {
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-quote: "Cormorant Garamond", Georgia, serif;
+
+  --color-page-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #faf7f5;
+  --color-surface-alt: #f5ebe3;
+  --color-hero-fallback: #2a1020;
+  --color-footer-bg: #45355e;
+  --color-header-bg: #ffffff;
+  --color-header-border: rgba(59, 31, 78, 0.16);
+
+  --color-brand-accent: #3b1f4e !important;
+  --color-brand-accent-hover: #55306c !important;
+  --color-brand-accent-light: #6b4585 !important;
+  --color-brand-accent-border: #d9cce6 !important;
+  --color-brand-accent-muted: #f4eff8 !important;
+  --color-brand-accent-rgb: 59, 31, 78 !important;
+
+  --color-brand-pink: #c4a8d8;
+  --color-brand-primary: #3b1f4e !important;
+  --color-brand-cream: #f5ebe3;
+  --color-brand-sale: #c1272d;
+  --color-brand-gold: #c9a86c;
+
+  --color-text-heading: #0a0a0a;
+  --color-text-subheading: #2a2a2a;
+  --color-text-body: #4d4d4d;
+  --color-text-muted: #737373;
+  --color-text-inverse: #ffffff;
+
+  --color-promo-bg: #000000;
+  --color-promo-text: #ffffff;
+  --gradient-promo: #000000;
+
+  --color-nav-text: var(--color-text-inverse);
+  --color-nav-text-hero: var(--color-text-inverse);
+
+  --letter-spacing-nav: 0.12em;
+  --hero-height: clamp(640px, 88vh, 960px);
+
+  --gradient-brand-accent: linear-gradient(
+    135deg,
+    #3b1f4e 0%,
+    #6b4585 100%
+  ) !important;
+  --gradient-brand-button: linear-gradient(135deg, #3b1f4e, #55306c) !important;
+}
+
+/* Jewelry nav — search CTA (segment CSS loads in page.css after layout) */
+.jewelry-nav-root {
+  --jewelry-nav-accent: #3b1f4e !important;
+  --jewelry-nav-ink: #1a1224;
+  --jewelry-nav-muted: #6b5f7a;
+  --jewelry-nav-top-height: 4.25rem !important;
+  --jewelry-nav-cats-height: 2.5rem !important;
+}
+
+.jewelry-nav__logo-img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 13.5rem !important;
+  max-height: 2.35rem !important;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .jewelry-nav__logo-img {
+    max-width: 18.5rem !important;
+    max-height: 2.75rem !important;
+  }
+}
+
+.jewelry-nav__search-submit {
+  background: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.beauty-shop-grid__sort-pill--active,
+.beauty-shop-grid__empty-cta.btn-primary,
+.jewelry-shop-grid__sort-pill--active,
+.jewelry-shop-grid__empty-cta.btn-primary,
+.btn-primary,
+.btn-brand {
+  background: #3b1f4e !important;
+  background-image: none !important;
+  border-color: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.beauty-shop-grid__sort-pill--active:hover,
+.beauty-shop-grid__empty-cta.btn-primary:hover,
+.jewelry-shop-grid__sort-pill--active:hover,
+.jewelry-shop-grid__empty-cta.btn-primary:hover,
+.btn-primary:hover:not(:disabled),
+.btn-brand:hover:not(:disabled) {
+  background: #55306c !important;
+  border-color: #55306c !important;
+  color: #ffffff !important;
+}
+
+/* White jewellery storefront header (impulse.css loads later in the bundle) */
+[data-nav-transparent="true"] .nav-header,
+[data-nav-transparent="false"] .nav-header {
+  background: var(--color-header-bg) !important;
+  border-bottom: 1px solid var(--color-header-border) !important;
+  box-shadow: 0 1px 8px rgba(59, 31, 78, 0.08) !important;
+}
+
+[data-nav-transparent="true"] .nav-header::before {
+  display: none !important;
+}
+
+[data-nav-transparent="true"] .nav-luxury-link,
+[data-nav-transparent="false"] .nav-luxury-link,
+[data-nav-transparent="true"] .nav-cart-icon-link,
+[data-nav-transparent="false"] .nav-cart-icon-link,
+[data-nav-transparent="true"] .nav-account-icon-link,
+[data-nav-transparent="false"] .nav-account-icon-link,
+[data-nav-transparent="true"] .nav-wishlist-icon-link,
+[data-nav-transparent="false"] .nav-wishlist-icon-link {
+  color: #000000 !important;
+}
+
+[data-nav-transparent="true"] .nav-mobile-trigger__bar,
+[data-nav-transparent="true"] .nav-mobile-trigger__bar::before,
+[data-nav-transparent="true"] .nav-mobile-trigger__bar::after,
+[data-nav-transparent="false"] .nav-mobile-trigger__bar,
+[data-nav-transparent="false"] .nav-mobile-trigger__bar::before,
+[data-nav-transparent="false"] .nav-mobile-trigger__bar::after {
+  background: #000000;
+}
+
+/* H.Ankit Jewels wordmark */
+[data-nav-transparent="true"] .nav-header__logo-img,
+[data-nav-transparent="false"] .nav-header__logo-img,
+[data-nav-transparent="true"] .nav-header__logo-img--light,
+[data-nav-transparent="false"] .nav-header__logo-img--light {
+  display: block !important;
+  width: auto;
+  max-width: 12rem;
+  max-height: 2.5rem;
+  object-fit: contain;
+}
+
+[data-nav-transparent="true"] .nav-header__logo-img--dark,
+[data-nav-transparent="false"] .nav-header__logo-img--dark {
+  display: none !important;
+}
+
+.site-footer__logo {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 13.5rem !important;
+  max-height: 2.85rem !important;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .site-footer__logo {
+    max-width: 18.5rem !important;
+    max-height: 3.6rem !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .site-footer__logo {
+    max-width: 13.5rem !important;
+    max-height: 2.85rem !important;
+  }
+
+  .site-footer__inner {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .site-footer__label {
+    font-size: 0.6875rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .site-footer__link {
+    font-size: 0.8125rem !important;
+  }
+
+  .site-footer__text {
+    font-size: 0.8125rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .site-footer__newsletter-form {
+    flex-direction: column !important;
+  }
+
+  .site-footer__newsletter-btn {
+    width: 100%;
+  }
+}
+
+.site-footer {
+  --color-footer-bg: #45355e;
+  --color-footer-wave-accent: #EBDBED;
+  --footer-wave-fill: #45355e;
+  --footer-wave-accent: #EBDBED;
+  background: #45355e !important;
+  color: #ffffff !important;
+}
+
+/* Soft page-to-footer transition: animated wave + full-bleed purple body */
+.site-footer.site-footer--with-wave {
+  background: transparent !important;
+}
+
+.site-footer.site-footer--with-wave .site-footer__body {
+  background: #45355e !important;
+  box-shadow: 0 -2px 0 0 #45355e;
+}
+
+.site-footer__wave-layer use {
+  fill: #45355e !important;
+}
+
+.site-footer__label,
+.site-footer__text,
+.site-footer__link,
+.site-footer__copyright,
+.site-footer__social-link,
+.site-footer__social-fallback {
+  color: #ffffff !important;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  color: #f5ebe3 !important;
+}
+
+.site-footer__divider {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.site-footer .site-footer__newsletter-btn.btn-brand,
+.site-footer .site-footer__newsletter-btn.btn-brand:hover:not(:disabled) {
+  background-color: var(--color-brand-primary) !important;
+  background-image: none !important;
+  border-color: var(--color-brand-primary) !important;
+  color: #ffffff !important;
+}
+
+.jewelry-subscribe {
+  --jewelry-subscribe-cta-bg: var(--color-brand-primary);
+  --jewelry-subscribe-cta-bg-hover: var(--color-brand-accent-hover);
+}
+
+.promo-bar {
+  --color-promo-text: #ffffff;
+  background: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.promo-bar__text,
+.promo-bar__icon {
+  color: #ffffff !important;
+}
+
+.promo-bar__highlight {
+  color: #3b1f4e !important;
+}
+
+.impulse-hero__eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.impulse-hero__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-text-inverse);
+}
+
+.impulse-hero__description {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.impulse-hero__eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.impulse-hero__cta {
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-surface);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.impulse-hero__cta:hover {
+  background: transparent;
+  color: var(--color-text-inverse);
+}
+
+.shop-by-nav__pill {
+  border-radius: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-color: var(--color-border-spinner);
+}
+
+.shop-by-nav__pill--active,
+.shop-by-nav__pill:hover {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+/* Promo banners — gap between Gift Edit / Diamond Rings (impulse.css loads later) */
+.promo-banners {
+  background: #f4f4f4 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .promo-banners {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+.promo-banners__grid,
+.promo-banners__single {
+  max-width: var(--container-max, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo-banners__grid {
+  gap: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+  .promo-banners__grid {
+    gap: 1.5rem !important;
+  }
+}
+
+.promo-banners__tile {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  aspect-ratio: 4 / 3 !important;
+}
+
+@media (min-width: 768px) {
+  .promo-banners__tile {
+    aspect-ratio: 5 / 4 !important;
+  }
+}
+
+.promo-banners__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.collections-showcase__eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.newsletter-section__submit {
+  background: var(--color-brand-primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.newsletter-section__submit:hover {
+  background: var(--color-brand-accent);
+}
+
+.shop-banner__cta {
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.store-faqs__title {
+  font-family: var(--font-heading);
+}
+
+.jewelry-faqs {
+  --jewelry-faqs-bg: #ffffff;
+  --jewelry-faqs-panel: #f4eff8;
+  --jewelry-faqs-eyebrow: var(--color-brand-primary);
+}
+
+@media (max-width: 767px) {
+  .jewelry-faqs__inner {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .jewelry-faqs__panel {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Help page — Lumière beauty support */
+.help-page__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.help-page__section-title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.help-gradient-text {
+  background: var(--gradient-brand-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-btn-brand {
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.help-btn-brand:hover {
+  background: var(--color-brand-accent);
+}
+
+.help-tab-active {
+  background: var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+/* Cart dropdown — Lumière beauty styling */
+.nav-cart-dropdown {
+  border: 1px solid var(--color-border-muted) !important;
+  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.18) !important;
+}
+
+.nav-cart-dropdown__header {
+  background: var(--gradient-surface-muted);
+  border-bottom: 1px solid var(--color-border-light) !important;
+}
+
+.nav-cart-dropdown__title {
+  font-family: var(--font-heading) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+}
+
+.nav-cart-dropdown__thumb {
+  width: 5.25rem !important;
+  height: 5.25rem !important;
+  background: var(--color-surface-muted) !important;
+}
+
+.nav-cart-dropdown__item-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 500 !important;
+}
+
+.nav-cart-dropdown__cta {
+  background: var(--color-brand-primary) !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.14em !important;
+}
+
+.nav-cart-dropdown__cta:hover {
+  background: var(--color-brand-accent) !important;
+  border-color: var(--color-brand-accent) !important;
+}
+
+.nav-cart-dropdown--beauty .nav-cart-dropdown__cta--outline,
+.nav-cart-dropdown__cta-row .nav-cart-dropdown__cta--outline {
+  background: transparent !important;
+  color: var(--color-brand-primary) !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+}
+
+.nav-cart-dropdown--beauty .nav-cart-dropdown__cta--primary,
+.nav-cart-dropdown__cta-row .nav-cart-dropdown__cta--primary {
+  background: var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.cart-toast {
+  background: var(--color-brand-primary) !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+
+/* Cart dropdown — beauty theme fallback via theme-overrides */
+.nav-cart-dropdown--beauty .nav-cart-dropdown__cta--primary {
+  background: var(--color-brand-primary) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+.nav-cart-dropdown--beauty .nav-cart-dropdown__cta--primary:hover {
+  background: var(--color-brand-accent) !important;
+  border-color: var(--color-brand-accent) !important;
+}
+
+/* Force beauty PDP CTAs even if env not inlined */
+.product-page--beauty .product-actions .product-cta-btn--primary {
+  background: var(--color-brand-primary) !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+  border-radius: 0 !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.product-page--beauty .product-actions .product-cta-btn--primary::before {
+  display: none !important;
+}
+
+.product-page--beauty .product-actions .product-cta-btn--secondary {
+  background: transparent !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+  border-radius: 0 !important;
+  color: var(--color-brand-primary) !important;
+}
+
+.product-page--beauty .product-actions .product-cta-btn--secondary::before {
+  display: none !important;
+}
+
+
+/* ── Global buttons & CTAs ───────────────────────────────── */
+.btn-primary,
+.btn-brand,
+.cart-summary__checkout-btn,
+.checkout-form__submit,
+.checkout-page__btn--primary,
+.account-form__submit {
+  background: var(--color-brand-primary) !important;
+  border-color: var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-primary:hover:not(:disabled),
+.btn-brand:hover:not(:disabled),
+.cart-summary__checkout-btn:hover:not(:disabled),
+.checkout-form__submit:hover:not(:disabled),
+.checkout-page__btn--primary:hover:not(:disabled),
+.account-form__submit:hover:not(:disabled) {
+  background: var(--color-brand-accent) !important;
+  border-color: var(--color-brand-accent) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-brand-primary) !important;
+  color: var(--color-brand-primary) !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+  border-color: var(--color-brand-primary) !important;
+}
+
+/* Product page — beauty layout */
+@media (min-width: 1024px) {
+  .product-page--beauty #product-gallery-container,
+  .product-page--beauty .product-images-sticky {
+    flex: 0 0 58% !important;
+    width: 58% !important;
+    max-width: 58% !important;
+  }
+
+  .product-page--beauty .product-details-column,
+  .product-page--beauty .product-details-scroll {
+    flex: 0 0 42% !important;
+    width: 42% !important;
+    max-width: 42% !important;
+  }
+
+  .product-page--beauty #product-gallery-container .beauty-gallery__stage-frame {
+    max-height: min(calc(100vh - var(--header-height) - var(--promo-bar-height) - 5rem), 920px);
+  }
+}
+
+/* Product info — beauty */
+.product-info--beauty {
+  gap: 0.875rem;
+}
+
+.product-info--beauty .product-info__eyebrow-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.product-info--beauty .product-info__brand {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.product-info--beauty .product-info__category {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.product-info--beauty .product-info__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.2vw, 2.375rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--color-text-heading);
+}
+
+.product-info--beauty .product-info__excerpt {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+  max-width: 36rem;
+}
+
+.product-info--beauty .product-info__trust-line {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.product-rating-badge--beauty {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--color-border-muted);
+  border-radius: 0;
+  background: var(--color-surface-muted);
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.product-rating-badge--beauty .product-rating-badge__stars {
+  color: var(--color-brand-gold);
+}
+
+.product-rating-badge--beauty .product-rating-badge__score {
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.product-rating-badge--beauty .product-rating-badge__count {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* Product actions — beauty */
+.product-actions--beauty .product-price {
+  border-top: none;
+  padding-top: 0.25rem;
+}
+
+.product-actions--beauty .product-price__current {
+  font-family: var(--font-heading);
+  font-size: clamp(1.625rem, 2.8vw, 2rem);
+  font-weight: 500;
+}
+
+.product-actions--beauty .product-price__discount {
+  color: var(--color-brand-sale);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.product-actions--beauty .product-price__tax {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.product-actions--beauty .product-options__label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-heading);
+}
+
+.product-actions--beauty .product-option-btn {
+  border-radius: 0;
+  border-color: var(--color-border-neutral);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.product-actions--beauty .product-option-btn--active {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.product-actions--beauty .product-option-btn:hover:not(.product-option-btn--active) {
+  border-color: var(--color-brand-primary);
+}
+
+.product-actions--beauty .product-qty__control {
+  border-radius: 0;
+  border-color: var(--color-border-neutral);
+}
+
+.product-actions--beauty .product-qty__control button {
+  font-weight: 500;
+}
+
+.product-actions--beauty .product-cta-btn {
+  border-radius: 0;
+  min-height: 3.25rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.product-actions--beauty .product-cta-btn--primary {
+  background: var(--color-brand-primary) !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.product-actions--beauty .product-cta-btn--primary::before {
+  display: none !important;
+}
+
+.product-actions--beauty .product-cta-btn--primary:hover:not(:disabled) {
+  background: var(--color-brand-accent) !important;
+  border-color: var(--color-brand-accent) !important;
+}
+
+.product-actions--beauty .product-cta-btn--secondary {
+  background: transparent !important;
+  border: 1.5px solid var(--color-brand-primary) !important;
+  color: var(--color-brand-primary) !important;
+}
+
+.product-actions--beauty .product-cta-btn--secondary::before {
+  display: none !important;
+}
+
+.product-actions--beauty .product-cta-btn--secondary:hover:not(:disabled) {
+  background: var(--color-brand-primary) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+.product-actions--beauty .product-cta-btn--secondary:hover:not(:disabled) .product-cta-btn__label {
+  color: var(--color-text-inverse) !important;
+}
+
+/* Beauty product trust */
+.beauty-product-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.beauty-product-trust__secure {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.beauty-product-trust__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .beauty-product-trust__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.beauty-product-trust__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.beauty-product-trust__icon {
+  font-size: 0.875rem;
+  color: var(--color-brand-accent);
+}
+
+.beauty-product-trust__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text-heading);
+}
+
+/* Product details accordion — beauty */
+.product-details-section--beauty .product-accordion__trigger {
+  padding: 1rem 0;
+}
+
+.product-details-section--beauty .product-accordion__title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.product-details-section--beauty .product-details__block-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Related products on PDP */
+.related-products-section__inner .section-heading__title,
+.related-products-section h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Store / cart page headings */
+.store-page__title,
+.cart-page__title,
+.checkout-page__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+/* ── Cart page — H.Ankit jewellery ─────────────────────────── */
+.cart-page {
+  padding: 2.5rem 0 4rem;
+}
+
+.cart-page__header {
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cart-page__header::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 1rem;
+  border-radius: 999px;
+  background: var(--color-brand-gold, #c9a86c);
+}
+
+.cart-page__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brand-accent);
+}
+
+.cart-page__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--color-text-heading);
+}
+
+.cart-page__subtitle {
+  display: none;
+}
+
+.cart-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .cart-page__grid {
+    grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .cart-page__summary {
+    position: relative;
+  }
+}
+
+.jewelry-cart-empty__cta,
+.jewelry-cart-summary__checkout,
+.jewelry-cart-summary .coupon-apply__submit {
+  border-radius: 999px !important;
+}
+
+.jewelry-cart-empty__cta,
+.jewelry-cart-summary__checkout {
+  background: #3b1f4e !important;
+  background-image: none !important;
+  border-color: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.jewelry-cart-empty__cta:hover,
+.jewelry-cart-summary__checkout:hover {
+  background: #55306c !important;
+  border-color: #55306c !important;
+  color: #ffffff !important;
+}
+
+.jewelry-cart-item,
+.jewelry-cart-summary,
+.jewelry-cart-empty {
+  border-radius: 1.25rem;
+}
+
+.jewelry-cart-item__qty-control,
+.jewelry-cart-items__trust span {
+  border-radius: 999px;
+}
+
+/* Checkout — jewelry column + payment buttons */
+.jewelry-checkout-payment__btn {
+  border-radius: 0.5rem !important;
+}
+
+.jewelry-checkout-payment__btn--cod {
+  background: #ffffff !important;
+  color: #1a1224 !important;
+  border: 1px solid rgba(59, 31, 78, 0.28) !important;
+}
+
+.jewelry-checkout-payment__btn--cod:hover:not(:disabled) {
+  background: #ffffff !important;
+  color: #3b1f4e !important;
+  border-color: #3b1f4e !important;
+}
+
+.jewelry-checkout-payment__btn--online {
+  background: #3b1f4e !important;
+  border-color: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.jewelry-checkout-payment__btn--online:hover:not(:disabled) {
+  background: #55306c !important;
+  border-color: #55306c !important;
+  color: #ffffff !important;
+}
+
+/* ── Store page — jewelry PLP ──────────────────────────────── */
+.store-page--beauty {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.store-page--beauty .store-page__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .store-page--beauty .store-page__layout {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    column-gap: 3rem;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .store-page--beauty .store-page__filters-mobile {
+    display: none;
+  }
+
+  .store-page--beauty .store-page__main,
+  .store-page--beauty .jewelry-shop-grid {
+    display: contents;
+  }
+
+  .store-page--beauty .jewelry-shop-grid__crumbs {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 1rem;
+  }
+
+  .store-page--beauty .jewelry-shop-grid__intro {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-bottom: 2rem;
+  }
+
+  .store-page--beauty .jewelry-shop-grid__header {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+  }
+
+  .store-page--beauty .jewelry-shop-grid__toolbar {
+    grid-column: 2;
+    grid-row: 3;
+    margin-bottom: 1.5rem;
+  }
+
+  .store-page--beauty .store-page__sidebar {
+    grid-column: 1;
+    grid-row: 3 / span 50;
+    align-self: start;
+    position: sticky;
+    top: calc(var(--header-height) + var(--promo-bar-height) + 20px);
+    z-index: 2;
+    max-height: calc(100vh - var(--header-height) - var(--promo-bar-height) - 40px);
+  }
+
+  .store-page--beauty .jewelry-shop-grid__applied,
+  .store-page--beauty .jewelry-shop-grid__progress,
+  .store-page--beauty .jewelry-shop-grid__grid,
+  .store-page--beauty .jewelry-shop-grid__empty,
+  .store-page--beauty .jewelry-shop-grid__footer {
+    grid-column: 2;
+  }
+
+  .store-page--beauty .store-page__sidebar .refinement-list--sticky {
+    position: static !important;
+    top: auto !important;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .store-page--beauty .store-page__sidebar .refinement-list__panel {
+    max-height: calc(100vh - var(--header-height) - var(--promo-bar-height) - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(20, 16, 32, 0.2) transparent;
+  }
+
+  .store-page--beauty .store-page__sidebar .refinement-list__panel::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .store-page--beauty .store-page__sidebar .refinement-list__panel::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: rgba(20, 16, 32, 0.2);
+  }
+}
+
+.store-page--beauty .store-page__filters-mobile {
+  grid-column: 1 / -1;
+}
+
+.store-page--beauty .refinement-list__shop-by {
+  display: flex;
+  align-items: center;
+  min-height: 1.75rem;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.store-page--beauty .refinement-list__section {
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 1rem 0 0.25rem;
+}
+
+.store-page--beauty .refinement-list__section--sort {
+  display: none;
+}
+
+.store-page--beauty .refinement-list__heading {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-heading);
+}
+
+.store-page--beauty .refinement-list__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.store-page--beauty .refinement-list__link {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.store-page--beauty .refinement-list__link::before {
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  border: 1px solid #c4c4c4;
+  background: transparent;
+}
+
+.store-page--beauty .refinement-list__link:hover {
+  color: var(--color-text-heading);
+}
+
+.store-page--beauty .refinement-list__link--active {
+  color: var(--color-text-heading);
+  font-weight: 500;
+}
+
+.store-page--beauty .refinement-list__link--active::before {
+  border-color: var(--color-text-heading);
+  background: var(--color-text-heading);
+  box-shadow: inset 0 0 0 2px var(--color-surface, #fff);
+}
+
+.store-page--beauty .refinement-list__applied {
+  display: none;
+}
+
+.store-page--beauty .mobile-filters .btn-outline {
+  border-color: var(--color-border-control);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* New arrivals + Trend Product — 4-up carousel (scroll when more than 4); taller New Arrivals cards */
+@media (min-width: 1024px) {
+  .new-arrivals .product-scroll,
+  .new-arrivals .bestsellers-carousel,
+  .trend-product .product-scroll,
+  .trend-product .bestsellers-carousel {
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+
+  .new-arrivals .product-scroll__viewport,
+  .new-arrivals .bestsellers-carousel__viewport,
+  .trend-product .product-scroll__viewport,
+  .trend-product .bestsellers-carousel__viewport {
+    overflow-x: auto;
+  }
+
+  .new-arrivals .product-scroll__track,
+  .new-arrivals .bestsellers-carousel__track,
+  .trend-product .product-scroll__track,
+  .trend-product .bestsellers-carousel__track {
+    display: flex !important;
+    width: max-content !important;
+    max-width: none !important;
+    padding-inline-end: 0 !important;
+    gap: 1rem;
+  }
+
+  .new-arrivals .product-scroll__slide,
+  .new-arrivals .bestsellers-carousel__slide,
+  .new-arrivals .product-scroll__slide:has(.jewelry-product-card),
+  .new-arrivals .bestsellers-carousel__slide:has(.jewelry-product-card),
+  .trend-product .product-scroll__slide,
+  .trend-product .bestsellers-carousel__slide,
+  .trend-product .product-scroll__slide:has(.jewelry-product-card),
+  .trend-product .bestsellers-carousel__slide:has(.jewelry-product-card) {
+    flex: 0 0 calc((100cqw - 3rem) / 4) !important;
+    width: calc((100cqw - 3rem) / 4) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+}
+
+/* Square product cards — New arrivals, Trending, Shop collections */
+.new-arrivals .jewelry-product-card__media,
+.collections-showcase .jewelry-product-card__media,
+.trending-this-week__media {
+  aspect-ratio: 1 / 1 !important;
+}
+
+/* Small screens — Gorgeous centered with side peeks; product cards 1.2 */
+@media (max-width: 768px) {
+  .gorgeous-collections .gorgeous-collections__grid,
+  .gorgeous-collections .gorgeous-collections__grid--carousel {
+    gap: 0.625rem !important;
+    padding: 0 8% 0.5rem !important;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gorgeous-collections .gorgeous-collections__grid .gorgeous-collections__card,
+  .gorgeous-collections .gorgeous-collections__grid--carousel .gorgeous-collections__card {
+    flex: 0 0 84% !important;
+    max-width: 84% !important;
+    scroll-snap-align: center !important;
+  }
+
+  .new-arrivals .product-scroll__slide,
+  .new-arrivals .bestsellers-carousel__slide,
+  .new-arrivals .product-scroll__slide:has(.jewelry-product-card),
+  .new-arrivals .bestsellers-carousel__slide:has(.jewelry-product-card),
+  .trend-product .product-scroll__slide,
+  .trend-product .bestsellers-carousel__slide,
+  .trend-product .product-scroll__slide:has(.jewelry-product-card),
+  .trend-product .bestsellers-carousel__slide:has(.jewelry-product-card),
+  .bestsellers .product-scroll__slide,
+  .bestsellers .bestsellers-carousel__slide,
+  .bestsellers .product-scroll__slide:has(.jewelry-product-card),
+  .bestsellers .bestsellers-carousel__slide:has(.jewelry-product-card),
+  .collections-showcase .collections-showcase__slide,
+  .collections-showcase .collections-showcase__slide:has(.jewelry-product-card) {
+    flex: 0 0 calc((100cqw - 0.75rem) / 1.2) !important;
+    width: calc((100cqw - 0.75rem) / 1.2) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .collections-showcase .collections-showcase__viewport {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .collections-showcase .collections-showcase__viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collections-showcase .collections-showcase__track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    grid-template-columns: none !important;
+    gap: 0.75rem !important;
+  }
+
+  .collections-showcase .collections-showcase__track--empty,
+  .collections-showcase .collections-showcase__track:has(.collections-showcase__empty) {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .collections-showcase .collections-showcase__empty {
+    flex: 1 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .trending-this-week .trending-this-week__inner {
+    padding-left: 1.25rem !important;
+    padding-right: 0 !important;
+  }
+
+  .trending-this-week .trending-this-week__header {
+    padding-left: 0 !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .trending-this-week .trending-this-week__grid {
+    padding-left: 0 !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .trending-this-week .trending-this-week__card {
+    flex: 0 0 calc((100% - 0.875rem) / 1.2) !important;
+    max-width: calc((100% - 0.875rem) / 1.2) !important;
+  }
+
+  .home-section-header {
+    flex-direction: row !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+  }
+
+  .home-section-header__link {
+    align-self: auto !important;
+    margin-left: auto !important;
+  }
+
+  .collections-grid__mosaic {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .collections-grid__card--pos-2 {
+    order: 1;
+  }
+
+  .collections-grid__card--pos-3 {
+    order: 2;
+  }
+
+  .collections-grid__card--pos-1,
+  .collections-grid__card--featured {
+    order: 3;
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+
+  .collections-grid__card--pos-4 {
+    order: 4;
+  }
+
+  .collections-grid__card--pos-5 {
+    order: 5;
+  }
+
+  .collections-grid__card--featured .collections-grid__media {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .collections-grid__card--horizontal .collections-grid__media {
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+/* Login page — hide All Jewellery / Featured category strip */
+body:has([data-login-viewport]) .jewelry-nav__cats,
+body:has(.jewelry-cart-items) .jewelry-nav__cats,
+body:has([data-checkout-page]) .jewelry-nav__cats {
+  display: none !important;
+}
+
+.jewelry-account-btn--primary,
+.jewelry-account-nav__link.is-active {
+  background: #45355e;
+  border-color: #45355e;
+  color: #ffffff;
+}
+
+.jewelry-account-btn--primary:hover:not(:disabled) {
+  background: #5c4878;
+  border-color: #5c4878;
+  color: #ffffff;
+}
+
+/* Product details — jewellery PDP */
+.jewelry-product-cta__btn--primary {
+  background: #3b1f4e !important;
+  border-color: #3b1f4e !important;
+  color: #ffffff !important;
+}
+
+.jewelry-product-cta__btn--primary:hover:not(:disabled) {
+  background: #55306c !important;
+  border-color: #55306c !important;
+}
+
+.jewelry-product-option--active {
+  background: #3b1f4e !important;
+  border-color: #3b1f4e !important;
+  color: #ffffff !important;
+}

@@ -1,0 +1,35 @@
+{
+  "defaultCountryCode": "in",
+  "loader": {
+    "variant": "spinner",
+    "enabled": true
+  },
+  "analytics": {
+    "enabled": true,
+    "cookieConsent": true
+  },
+  "imageHosts": [
+    "ui-avatars.com"
+  ],
+  "ui": {
+    "tokens": "@pradip1995/segment-tokens/themes/impulse.css",
+    "loader": "@pradip1995/segment-loader",
+    "analytics": "@pradip1995/segment-analytics",
+    "assets": "@pradip1995/segment-assets"
+  },
+  "auth": {
+    "googleCallback": true,
+    "resetPassword": {
+      "package": "@pradip1995/segment-login-template"
+    }
+  },
+  "legal": {
+    "contactEmail": "care@h-ankit.smartbytelabs.com",
+    "contactPhone": "+91 22 4000 1200",
+    "address": "H.Ankit Jewels, Mumbai, Maharashtra, India",
+    "websiteUrl": "https://h-ankit.smartbytelabs.com",
+    "lastUpdated": "August 2026",
+    "catalogLabel": "jewellery",
+    "returnWindowDays": 7
+  }
+}

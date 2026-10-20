@@ -1,0 +1,143 @@
+{
+  "kind": "returns",
+  "title": "Returns & Refunds Policy",
+  "eyebrow": "Easy returns",
+  "intro": "At {{shopName}}, we want you to love what you ordered. If something isn't right, here's everything you need to know about returning or exchanging it.",
+  "contentsLabel": "On this page",
+  "lastUpdated": "{{lastUpdated}}",
+  "sections": [
+    {
+      "id": "return-window",
+      "label": "Return Window",
+      "title": "Return Window",
+      "theme": "plain",
+      "intro": "You may initiate a return request within {{returnWindowDays}} days of delivery. Requests raised after this window will not be accepted, so please inspect your order as soon as it arrives."
+    },
+    {
+      "id": "eligibility",
+      "label": "Eligibility",
+      "title": "Eligibility for Return",
+      "theme": "highlighted",
+      "intro": "To be eligible for a return, the product must be:",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Unworn / unused and unwashed" },
+        { "text": "With all original tags attached (where applicable)" },
+        { "text": "In its original packaging" }
+      ],
+      "paragraphs": [
+        "This applies to all return requests, including size/fit-related returns and exchanges.",
+        "Mandatory unboxing video: For all return and exchange requests, you must share an unedited video of yourself unpacking the product for the first time, clearly showing the package seal, label, and the product condition.",
+        "Defective or incorrectly shipped items should be reported within the same {{returnWindowDays}}-day window."
+      ]
+    },
+    {
+      "id": "how-to-initiate",
+      "label": "How to Initiate",
+      "title": "How to Initiate a Return",
+      "theme": "plain",
+      "intro": "You can raise a return request through any of the following:",
+      "listStyle": "bullets",
+      "items": [
+        { "title": "Your Account Dashboard", "text": "Log in and select “Return Item” against your order." },
+        { "title": "Help / Contact", "text": "Use the help page on this website.", "href": "{{helpHref}}" },
+        { "title": "Email", "text": "Write to {{contactEmail}} with your order ID, product details, and reason for return.", "href": "mailto:{{contactEmail}}" },
+        { "title": "Phone Support", "text": "Call us at {{contactPhone}} during business hours.", "href": "tel:{{contactPhone}}" }
+      ]
+    },
+    {
+      "id": "pickup-charges",
+      "label": "Pickup & Charges",
+      "title": "Return Pickup & Shipping Charges",
+      "theme": "highlighted",
+      "listStyle": "bullets",
+      "items": [
+        { "text": "Once your return request is approved, we will arrange a pickup from your delivery address where reverse pickup is available." },
+        { "text": "A nominal shipping charge of {{returnShippingCharge}} will be deducted from your refund amount to cover pickup and return logistics." },
+        { "text": "For products confirmed to be defective or incorrectly shipped, no such shipping charge will be deducted." }
+      ]
+    },
+    {
+      "id": "quality-check",
+      "label": "Quality Check",
+      "title": "Quality Check & Verification",
+      "theme": "plain",
+      "intro": "All returned items go through a quality check at our facility upon receipt. Refunds or exchanges are processed only after this verification is complete."
+    },
+    {
+      "id": "refunds",
+      "label": "Refunds",
+      "title": "Refunds",
+      "theme": "highlighted",
+      "listStyle": "divided",
+      "items": [
+        { "title": "Prepaid Orders", "text": "Refunds are issued to your original payment method." },
+        { "title": "Cash on Delivery (COD) Orders", "text": "You will be asked to share your bank account details via email at {{contactEmail}} so we can process the refund via bank transfer." },
+        { "title": "Timeline", "text": "Refunds are processed within 3–5 business days of your returned item being received and verified at our facility." }
+      ]
+    },
+    {
+      "id": "exchanges",
+      "label": "Exchanges",
+      "title": "Exchanges",
+      "theme": "plain",
+      "intro": "Prefer a different size or item instead of a refund? We offer exchanges, subject to availability, within the same {{returnWindowDays}}-day window and eligibility criteria."
+    },
+    {
+      "id": "non-returnable",
+      "label": "Non-Returnable Items",
+      "title": "Non-Returnable Items",
+      "theme": "highlighted",
+      "intro": "At this time, all products listed on our website are eligible for return or exchange, subject to the eligibility criteria above. Any future exclusions will be clearly marked on the product page."
+    },
+    {
+      "id": "partial-returns",
+      "label": "Partial Returns",
+      "title": "Partial Returns on Multi-Item Orders",
+      "theme": "plain",
+      "intro": "If your order contains multiple items and you wish to return only some of them, you can do so. The remaining items in your order are unaffected."
+    },
+    {
+      "id": "non-serviceable",
+      "label": "Non-Serviceable Pickup",
+      "title": "Non-Serviceable Pickup Locations",
+      "theme": "highlighted",
+      "intro": "If reverse pickup is not available at your location, you will need to self-ship the product. The standard return shipping charge ({{returnShippingCharge}}) still applies, and we will reimburse reasonable self-shipping costs when you share the courier receipt."
+    },
+    {
+      "id": "packaging",
+      "label": "Packaging",
+      "title": "Return Packaging Requirement",
+      "theme": "plain",
+      "intro": "Please pack the product securely for return pickup or self-shipping, ideally in its original packaging."
+    },
+    {
+      "id": "refusal-of-delivery",
+      "label": "Refusal of Delivery",
+      "title": "Refusal of Delivery",
+      "theme": "highlighted",
+      "intro": "If you refuse to accept a delivery at your doorstep, your order will be treated as a customer-initiated cancellation and not as a return. Prepaid refunds are processed once the product is received back, less applicable shipping charges ({{returnShippingCharge}})."
+    },
+    {
+      "id": "missing-items",
+      "label": "Missing Items",
+      "title": "Missing Items Claim",
+      "theme": "plain",
+      "intro": "If you believe an item is missing, contact us within 48 hours of delivery at {{contactEmail}} with your unboxing video. Claims without a video, or after this window, cannot be processed."
+    },
+    {
+      "id": "fraudulent-returns",
+      "label": "Fraudulent Returns",
+      "title": "Fraudulent Returns",
+      "theme": "highlighted",
+      "intro": "We reserve the right to refuse a return, exchange, or refund where we identify a return as fraudulent, including items inconsistent with what was shipped or missing unboxing videos."
+    },
+    {
+      "id": "contact-us",
+      "label": "Need Help?",
+      "title": "Need Help?",
+      "theme": "plain",
+      "intro": "For any questions about your return, refund, or exchange, reach out to {{shopName}}."
+    }
+  ]
+}

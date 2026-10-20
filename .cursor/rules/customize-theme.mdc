@@ -1,0 +1,57 @@
+---
+description: Change storefront colors, fonts, and theme CSS
+globs: theme-overrides.css,public/**/*
+alwaysApply: false
+---
+
+# Customize theme, colors & fonts
+
+## Default stylesheet
+
+Build imports `@pradip1995/segment-tokens/themes/impulse.css` (full segment UI: hero, nav, footer, carousels).
+
+Alternate token presets (advanced — requires forking compiler import or publishing custom tokens):
+
+- `themes/impulse.css` — burgundy/cream, Playfair + Montserrat (default)
+- `themes/valero.css` — blue monochrome; **missing** many component class rules — not recommended alone
+
+## Brand colors & fonts (recommended)
+
+Edit **`theme-overrides.css`** in the project root. Rebuild after changes.
+
+```css
+:root {
+  --color-brand-accent: #5a2a43;
+  --color-brand-accent-hover: #723a56;
+  --color-brand-pink: #c68a8a;
+  --color-page-bg: #ffffff;
+  --color-footer-bg: #1a1a1a;
+  --color-text-heading: #1a1a1a;
+  --color-text-body: #4d4d4d;
+  --font-sans: "Montserrat", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-display: "Playfair Display", serif;
+}
+```
+
+Common variables: `--color-brand-*`, `--color-text-*`, `--color-surface-*`, `--color-promo-*`, `--font-sans`, `--font-heading`, `--header-height`, `--container-max`.
+
+## Logo & hero images
+
+| Asset | Location |
+|-------|----------|
+| Logo | `public/logo.png` |
+| Hero fallback | `public/theme-defaults/valero/hero-desktop.svg` (override same path) |
+| Favicon | `public/favicon.ico` |
+
+Env copy for hero defaults:
+
+```bash
+NEXT_PUBLIC_SHOP_NAME=My Shop
+NEXT_PUBLIC_HOME_PAGE_TITLE=Headline
+NEXT_PUBLIC_HOME_PAGE_DESCRIPTION=Subtext
+```
+
+## Section content
+
+Hero banners, promo text, testimonials, and features → **`storefront/pages.config.json`** segment `data` blocks (see each segment's `builder.settings.json` for fields).

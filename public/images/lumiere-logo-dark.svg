@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="44" viewBox="0 0 200 44" role="img" aria-label="Lumiere">
+  <text
+    x="0"
+    y="34"
+    fill="#0a0a0a"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="36"
+    font-weight="500"
+    letter-spacing="0.14em"
+  >Lumi&#232;re</text>
+  <line x1="0" y1="40" x2="200" y2="40" stroke="#8b3a62" stroke-width="1.5" opacity="0.85" />
+</svg>

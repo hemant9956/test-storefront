@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a12"/>
+      <stop offset="45%" stop-color="#3d1a2e"/>
+      <stop offset="100%" stop-color="#8b3a62"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#f4c4d8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f4c4d8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <ellipse cx="1450" cy="420" rx="280" ry="380" fill="#e8a4bf" opacity="0.18"/>
+  <ellipse cx="1320" cy="520" rx="180" ry="240" fill="#ffd4e5" opacity="0.12"/>
+  <rect x="1180" y="280" width="48" height="420" rx="24" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="1250" y="320" width="36" height="340" rx="18" fill="#c9a86c" opacity="0.85"/>
+  <circle cx="1268" cy="300" r="28" fill="#c9a86c" opacity="0.9"/>
+  <text x="120" y="180" fill="#ffffff" font-family="Georgia, serif" font-size="28" letter-spacing="8" opacity="0.7">BEAUTY REDEFINED</text>
+  <text x="120" y="280" fill="#ffffff" font-family="Georgia, serif" font-size="72" font-weight="400">Glow With</text>
+  <text x="120" y="370" fill="#f4c4d8" font-family="Georgia, serif" font-size="72" font-style="italic">Confidence</text>
+</svg>

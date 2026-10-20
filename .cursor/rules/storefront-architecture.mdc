@@ -1,0 +1,65 @@
+---
+description: Config-only Medusa storefront — structure, build flow, what not to edit
+alwaysApply: true
+---
+
+# Storefront architecture
+
+This folder (`storefront/`) is a **config client**, not a hand-written Next.js app. The Medusa backend lives in `../backend/`.
+
+## You edit (client root)
+
+| File | Purpose |
+|------|---------|
+| `pages.config.json` | Routes, workflows, layouts, segments, chrome, **Coming Soon** |
+| `storefront.config.json` | Region, loader, analytics, imageHosts |
+| `package.json` | npm deps on `@pradip1995/*` segments/workflows |
+| `.env.local` | Medusa URL, publishable key |
+| `public/` | Logo, favicon, brand static files |
+| `theme-overrides.css` | Brand colors & fonts (CSS variables) |
+
+## Coming Soon (`pages.config.json`)
+
+```json
+"comingSoon": {
+  "enabled": false,
+  "releaseDate": "",
+  "template": "classic",
+  "logoSrc": "/images/logo.png",
+  "email": "hello@example.com",
+  "data": {
+    "headline": "...",
+    "headlineAccent": "...",
+    "description": "...",
+    "ctaLabel": "Say hello",
+    "accent": "#8b5a71"
+  }
+}
+```
+
+- Templates live in `@pradip1995/segment-coming-soon` (`classic`, `bloom`)
+- `site.name` / `site.description` merge into the page automatically
+- Extra template fields go in `data`
+- Optional preview bypass while gated: `COMING_SOON_BYPASS_SECRET`
+
+## Generated (do not hand-edit)
+
+| Path | Purpose |
+|------|---------|
+| `.generated-app/` | Full Next.js app from `storefront-build` |
+
+Section copy, banners, promo tiles, and other UI content live in **`pages.config.json`** — each segment entry can include a `data` object (see `builder.settings.json` in segment packages for field shapes).
+
+After any change to config, deps, or `theme-overrides.css`:
+
+```bash
+npm run storefront:build
+npm run dev
+```
+
+## Rules
+
+- Never commit secrets from `.env.local`
+- Never edit `.generated-app/` — changes are overwritten on rebuild
+- Segment logic lives in npm packages; fix bugs there + publish, not copy-paste into this repo
+- URL pattern: `http://localhost:8000/<region>/...`

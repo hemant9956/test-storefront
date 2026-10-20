@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1200" fill="none">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#1a0a12"/>
+      <stop offset="60%" stop-color="#5c2444"/>
+      <stop offset="100%" stop-color="#8b3a62"/>
+    </linearGradient>
+  </defs>
+  <rect width="750" height="1200" fill="url(#mbg)"/>
+  <ellipse cx="520" cy="500" rx="200" ry="280" fill="#e8a4bf" opacity="0.2"/>
+  <rect x="420" y="340" width="36" height="320" rx="18" fill="#1a1a1a" opacity="0.75"/>
+  <rect x="475" y="370" width="28" height="260" rx="14" fill="#c9a86c" opacity="0.9"/>
+  <text x="48" y="900" fill="#ffffff" font-family="Georgia, serif" font-size="42">Beauty That</text>
+  <text x="48" y="960" fill="#f4c4d8" font-family="Georgia, serif" font-size="42" font-style="italic">Inspires You</text>
+</svg>

@@ -1,0 +1,833 @@
+{
+  "version": "1",
+  "site": {
+    "name": "H.Ankit Jewels",
+    "description": "Timeless jewellery crafted for celebrations, milestones, and everyday elegance.",
+    "locale": "en_IN",
+    "productCardVariant": "jewelry",
+    "favicon": "/icon.svg"
+  },
+  "comingSoon": {
+    "package": "@pradip1995/segment-coming-soon",
+    "enabled": false,
+    "releaseDate": "",
+    "template": "classic",
+    "logoSrc": "/images/h-ankit-logo-full.png",
+    "data": {
+      "headline": "Jewellery crafted for your",
+      "headlineAccent": "every milestone",
+      "description": "H.Ankit Jewels is launching soon — timeless pieces for celebrations and everyday elegance.",
+      "accent": "#a67c52",
+      "surface": "#f7f3ee"
+    }
+  },
+  "chrome": [
+    {
+      "package": "@pradip1995/segment-promo-bar",
+      "slot": "promoBar",
+      "dataKey": "promoBar",
+      "data": {
+        "active": true,
+        "text": "Free shipping on orders above ₹599",
+        "code": "WELCOME10",
+        "value": "10% off"
+      }
+    },
+    {
+      "package": "@pradip1995/segment-jewelry-nav",
+      "slot": "nav",
+      "dataKey": "nav",
+      "data": {
+        "variant": "jewelry",
+        "shopName": "H.Ankit Jewels",
+        "logoUrl": "/images/h-ankit-logo-navbar.png",
+        "searchPlaceholder": "Search for diamond jewellery"
+      }
+    },
+    {
+      "package": "@pradip1995/segment-footer",
+      "slot": "footer",
+      "dataKey": "footer",
+      "data": {
+        "shopName": "H.Ankit Jewels",
+        "description": "Timeless jewellery crafted for celebrations, milestones, and everyday elegance.",
+        "logoUrl": "/images/h-ankit-logo-footer.png",
+        "showNewsletter": false,
+        "companyLinks": [
+          { "href": "/", "label": "Home" },
+          { "href": "/store", "label": "Shop" },
+          { "href": "/help", "label": "Help" },
+          { "href": "/faq", "label": "FAQs" },
+          { "href": "/returns-refund-policy", "label": "Returns & Refunds" }
+        ]
+      }
+    },
+    {
+      "package": "@pradip1995/segment-login-popup",
+      "slot": "loginPopup",
+      "dataKey": "loginPopup",
+      "data": {
+        "enabled": true,
+        "showDelayMs": 8000,
+        "storageKey": "hankit_login_popup_seen",
+        "imageSrc": "/images/h.ankit.webp",
+        "logoSrc": "/images/h-ankit-logo.png",
+        "brandTitle": "Login now",
+        "headline": "Unlock exclusive jewellery offers",
+        "subtext": "Sign in with OTP for member offers and faster checkout.",
+        "shopName": "H.Ankit Jewels",
+        "featureCards": [
+          {
+            "title": "Timeless",
+            "text": "Crafted for every milestone"
+          },
+          {
+            "title": "Trusted",
+            "text": "Quality you can wear"
+          },
+          {
+            "title": "Exclusive",
+            "text": "Member-only offers"
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "workflow": "@pradip1995/workflow-home",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-hero",
+          "data": {
+            "homeBanner": {
+              "title": "Timeless Beauty",
+              "subtitle": "Jewellery Crafted for Every Occasion",
+              "description": "Discover elegant pieces designed to celebrate your most meaningful moments.",
+              "buttonName": "Shop Now",
+              "buttonLink": "/store",
+              "image": "/images/h.ankit.webp"
+            },
+            "variant": "overlay",
+            "appBanner": {
+              "title": "Timeless Beauty",
+              "subtitle": "Jewellery Crafted for Every Occasion",
+              "description": "Discover elegant pieces designed to celebrate your most meaningful moments.",
+              "buttonName": "Shop Now",
+              "buttonLink": "/store",
+              "image": "/images/h-ankit.webp"
+            }
+          }
+        },
+        {
+          "package": "@pradip1995/segment-service-highlights",
+          "data": {
+            "ariaLabel": "Why shop with us",
+            "items": [
+              {
+                "title": "Certified Jewellery",
+                "description": "Authentically crafted with premium-quality materials and timeless precision.",
+                "icon": "/images/service-highlights/certified-jewellery.png"
+              },
+              {
+                "title": "Lifetime Warranty",
+                "description": "Designed to shine forever with lifetime care and lasting craftsmanship.",
+                "icon": "/images/service-highlights/lifetime-warranty.png"
+              },
+              {
+                "title": "Secure Payment",
+                "description": "Enjoy easy and convenient payment options designed to suit your comfort and budget.",
+                "icon": "/images/service-highlights/secure-payment.png"
+              },
+              {
+                "title": "Free Shipping",
+                "description": "Make a design from Indus Crown even more memorable with bespoke engraving.",
+                "icon": "/images/service-highlights/free-shipping.png"
+              },
+              {
+                "title": "Easy Return",
+                "description": "Hassle-free returns designed for a seamless luxury experience with every purchase.",
+                "icon": "/images/service-highlights/easy-return.png"
+              }
+            ]
+          }
+        },
+        {
+          "package": "@pradip1995/segment-collections-grid",
+          "data": {
+            "title": "H.Ankit Collections",
+            "subtitle": "Explore our newly launched collection",
+            "ariaLabel": "H.Ankit Collections"
+          }
+        },
+        {
+          "package": "@pradip1995/segment-gorgeous-collections",
+          "data": {
+            "eyebrow": "TOP BY CATEGORIES",
+            "title": "Gorgeous Collections",
+            "ariaLabel": "Gorgeous Collections"
+          }
+        },
+        "@pradip1995/segment-new-arrivals",
+        {
+          "package": "@pradip1995/segment-jewelry-feature-banner",
+          "data": {
+            "eyebrow": "BRIDAL COLLECTION",
+            "title": "Designed for your Forever",
+            "description": "Celebrate your most meaningful moment with H.Ankit Jewels — crafted to symbolize timeless love, commitment and elegance.",
+            "ctaText": "EXPLORE BRIDAL COLLECTION —",
+            "ctaLink": "/store",
+            "showPromoBar": true,
+            "promoItems": [
+              {
+                "text": "Crafted for modern royalty"
+              },
+              {
+                "text": "Premium jewelry, timeless elegance"
+              }
+            ],
+            "imageUrl": "/images/bridal/bridal-hero.jpg",
+            "imageAlt": "Bridal collection"
+          }
+        },
+        "@pradip1995/segment-bestsellers-carousel",
+        {
+          "package": "@pradip1995/segment-trending-this-week",
+          "data": {
+            "eyebrow": "TRENDING THIS WEEK",
+            "title": "What's Everyone's Loving",
+            "subtitle": "The most wanted pieces of the week, chosen by you",
+            "ariaLabel": "Trending this week",
+            "tag": "Trending this week",
+            "limit": 4
+          }
+        },
+        {
+          "package": "@pradip1995/segment-promotional-banners",
+          "data": {
+            "banners": [
+              {
+                "title": "Gift Edit",
+                "description": "Curated jewellery boxes and signature pieces made to celebrate every occasion.",
+                "buttonName": "SHOP GIFTS",
+                "link": "/store",
+                "image": "/images/promo-gift-edit.png"
+              },
+              {
+                "title": "Diamond Rings",
+                "description": "Handcrafted diamond rings designed for timeless beauty and everyday elegance.",
+                "buttonName": "SHOP RINGS",
+                "link": "/store",
+                "image": "/images/promo-diamond-rings.png"
+              }
+            ]
+          }
+        },
+        "@pradip1995/segment-collections-showcase",
+        {
+          "package": "@pradip1995/segment-jewelry-promise",
+          "data": {
+            "eyebrow": "OUR PROMISE",
+            "title": "Crafted with Intention, Made to be Treasured",
+            "description": "H.Ankit Jewels was born from a single belief — every woman deserves jewellery that celebrates her elegance and becomes a part of her life's most precious moments. Each piece is thoughtfully designed and handcrafted using ethically sourced materials and exceptional craftsmanship.",
+            "image": "/image.png",
+            "imageAlt": "Jewellery craftsmanship",
+            "ariaLabel": "Our promise",
+            "features": [
+              {
+                "title": "Handcrafted Excellence",
+                "description": "Each piece is meticulously crafted by skilled artisans with passion and precision.",
+                "icon": "/images/Vector_b0818eaf-bd4d-457c-867f-ff07cb8e3c93.png"
+              },
+              {
+                "title": "Ethically Sourced",
+                "description": "We use conflict-free responsibly sourced diamonds and gemstones.",
+                "icon": "/images/Frame_161.png"
+              },
+              {
+                "title": "Lifetime Shine Warranty",
+                "description": "Our jewellery is made to last. Enjoy a lifetime shine warranty on every piece.",
+                "icon": "/images/tdesign_secured.png"
+              },
+              {
+                "title": "Luxury Packaging",
+                "description": "Beautifully packaged for you or your loved ones because every detail matters.",
+                "icon": "/images/wpf_packaging.png"
+              },
+              {
+                "title": "Secure Shopping",
+                "description": "Encrypted payments and secure checkout for a worry-free experience.",
+                "icon": "/images/nimbus_shopping-cart.png"
+              },
+              {
+                "title": "Complimentary Shipping",
+                "description": "Enjoy free, insured shipping across India on every order.",
+                "icon": "/images/la_shipping-fast.png"
+              }
+            ]
+          }
+        },
+        {
+          "package": "@pradip1995/segment-find-your-crown",
+          "data": {
+            "title": "Find Your Crown",
+            "subtitle": "Select designs crafted to match your style",
+            "ariaLabel": "Find your crown",
+            "columns": [
+              {
+                "id": "rings",
+                "categoryHandle": "rings"
+              },
+              {
+                "id": "pendant",
+                "categoryHandle": "pendant"
+              },
+              {
+                "id": "bestsellers",
+                "label": "Best Seller",
+                "tags": [
+                  "Best Seller",
+                  "bestseller"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "package": "@pradip1995/segment-loved-by-customers",
+          "data": {
+            "title": "Loved by Our Customers",
+            "subtitle": "Real stories from those who wear H.Ankit Jewels with pride.",
+            "ariaLabel": "Customer reviews",
+            "reviews": [
+              {
+                "id": "1",
+                "name": "Ananya R.",
+                "rating": 5,
+                "text": "Absolutely stunning craftsmanship. The piece feels elegant, premium, and perfect for everyday wear. I've received so many compliments.",
+                "imageUrl": "/images/reviews/review-1.png",
+                "verified": true,
+                "product": {
+                  "name": "Double Floral Statement Cocktail Butterfly Style Fashion Ring",
+                  "imageUrl": "/images/reviews/review-1.png",
+                  "price": "2398.90",
+                  "currency": "inr",
+                  "href": "/store"
+                }
+              },
+              {
+                "id": "2",
+                "name": "Rohit K.",
+                "rating": 5,
+                "text": "Beautiful design and excellent finishing. It looks even better in person and feels truly special.",
+                "imageUrl": "/images/reviews/review-2.png",
+                "verified": true,
+                "product": {
+                  "name": "Double Floral Statement Cocktail Butterfly Style Fashion Ring",
+                  "imageUrl": "/images/reviews/review-2.png",
+                  "price": "2398.90",
+                  "currency": "inr",
+                  "href": "/store"
+                }
+              },
+              {
+                "id": "3",
+                "name": "Neha S.",
+                "rating": 5,
+                "text": "The design is subtle yet luxurious. You can really feel the quality and attention to detail. Perfect for both everyday wear and special occasions.",
+                "imageUrl": "/images/reviews/review-3.png",
+                "verified": true,
+                "product": {
+                  "name": "Emerald Cut Signet Style Diamond Ring",
+                  "imageUrl": "/images/reviews/review-3.png",
+                  "price": "1971.31",
+                  "currency": "inr",
+                  "href": "/store"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "package": "@pradip1995/segment-jewelry-subscribe",
+          "data": {
+            "eyebrow": "Join Our Journey",
+            "title": "Be the First to Know",
+            "description": "Exclusive Launch, early access & Styling Inspiration for H.Ankit Jewels.",
+            "emailPlaceholder": "Enter your email...",
+            "submitLabel": "Subscribe",
+            "privacyText": "We Respect your Privacy, Unsubscribe at any time",
+            "backgroundImageUrl": "/images/subscribe/subscribe-bg-desktop.png"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "H.Ankit Jewels — Timeless Jewellery Online",
+        "description": "Shop diamond and gold jewellery for celebrations, milestones, and everyday elegance. Crafted pieces delivered across India."
+      }
+    },
+    {
+      "route": "/store",
+      "workflow": "@pradip1995/workflow-store",
+      "layout": "@pradip1995/layout-default/store-beauty",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-mobile-filters",
+          "data": {
+            "title": "Filters"
+          }
+        },
+        {
+          "package": "@pradip1995/segment-refinement-list",
+          "data": {
+            "title": "Shop by",
+            "showSort": false
+          }
+        },
+        {
+          "package": "@pradip1995/segment-jewelry-shop-grid",
+          "data": {
+            "title": "All jewellery"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Shop",
+        "description": "Browse diamond and gold jewellery from H.Ankit Jewels."
+      }
+    },
+    {
+      "route": "/products/[handle]",
+      "workflow": "@pradip1995/workflow-product",
+      "layout": "@pradip1995/layout-jewelry-product",
+      "segments": [
+        "@pradip1995/segment-jewelry-product-gallery",
+        "@pradip1995/segment-jewelry-product-info",
+        "@pradip1995/segment-jewelry-product-actions",
+        {
+          "package": "@pradip1995/segment-jewelry-related-products",
+          "data": {
+            "title": "You may also love",
+            "productCardVariant": "jewelry"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Product",
+        "description": "View jewellery details, price, and available variants."
+      }
+    },
+    {
+      "route": "/cart",
+      "workflow": "@pradip1995/workflow-cart",
+      "layout": "@pradip1995/layout-default/cart",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-jewelry-cart-item",
+          "data": {
+            "emptyMessage": "Discover timeless jewellery crafted for celebrations and everyday elegance.",
+            "emptyButton": "Shop jewellery"
+          }
+        },
+        {
+          "package": "@pradip1995/segment-jewelry-cart-summary",
+          "data": {
+            "summaryTitle": "Bag summary",
+            "checkoutLabel": "Checkout"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Cart",
+        "description": "Review the jewellery in your bag before checkout."
+      }
+    },
+    {
+      "route": "/checkout",
+      "workflow": "@pradip1995/workflow-checkout",
+      "layout": "@pradip1995/layout-checkout",
+      "segments": [
+        "@pradip1995/segment-jewelry-checkout-form",
+        "@pradip1995/segment-jewelry-checkout-summary"
+      ],
+      "metadata": {
+        "title": "Checkout",
+        "description": "Complete your H.Ankit Jewels order."
+      }
+    },
+    {
+      "route": "/account/*",
+      "workflow": "@pradip1995/workflow-account",
+      "layout": "@pradip1995/layout-jewelry-account",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-jewelry-login",
+          "data": {
+            "title": "Sign in",
+            "subtitle": "Select your login mode to continue",
+            "shopName": "H.Ankit Jewels",
+            "authMode": "otp",
+            "otpComponent": "@pradip1995/segment-login-template/commerce-auth-otp-modal",
+            "brandPanel": {
+              "image": "/images/login-jewellery.png",
+              "eyebrow": "Jewellery & watches",
+              "title": "Welcome back",
+              "description": "Sign in with OTP for a seamless jewellery shopping experience.",
+              "featuresLabel": "Why H Ankit Jewels?",
+              "featureCards": [
+                {
+                  "title": "Timeless",
+                  "text": "Crafted for every milestone"
+                },
+                {
+                  "title": "Trusted",
+                  "text": "Quality you can wear"
+                },
+                {
+                  "title": "Exclusive",
+                  "text": "Member-only offers"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "metadata": {
+        "title": "My account",
+        "description": "Manage your profile, orders, addresses, and payment methods."
+      }
+    },
+    {
+      "route": "/wishlist",
+      "workflow": "@pradip1995/workflow-wishlist",
+      "layout": "@pradip1995/layout-default/wishlist",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-wishlist",
+          "data": {
+            "title": "My wishlist",
+            "emptyMessage": "Your wishlist is empty."
+          }
+        }
+      ],
+      "metadata": {
+        "title": "My wishlist",
+        "description": "Your saved H.Ankit Jewels favourites"
+      }
+    },
+    {
+      "route": "/faq",
+      "workflow": "@pradip1995/workflow-layout",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-jewelry-faqs",
+          "data": {
+            "eyebrow": "HELP & SUPPORT",
+            "title": "Jewellery FAQs",
+            "initialVisibleCount": 8,
+            "moreLabel": "More",
+            "lessLabel": "Less",
+            "categories": [
+              {
+                "title": "Jewellery & Products",
+                "faqs": [
+                  {
+                    "question": "How do I choose the right jewellery for me?",
+                    "answer": "Our jewellery is designed for different styles and occasions. You can explore our collections by jewellery type, metal, gemstone, and occasion to find a piece that suits your personal style."
+                  },
+                  {
+                    "question": "Are your diamonds and gemstones certified?",
+                    "answer": "Yes. Selected diamond and gemstone jewellery comes with the relevant certification and authenticity details. Product-specific certification information is mentioned on the product page."
+                  }
+                ]
+              },
+              {
+                "title": "Orders & delivery",
+                "faqs": [
+                  {
+                    "question": "When will I receive my order?",
+                    "answer": "Orders are carefully packed and dispatched after confirmation. Delivery time depends on your location and the product. You can check the estimated delivery time during checkout."
+                  },
+                  {
+                    "question": "Do you offer free shipping?",
+                    "answer": "Yes, we offer free shipping on eligible orders. Shipping availability and charges may vary depending on the order value and delivery location."
+                  },
+                  {
+                    "question": "Can I track my jewellery order?",
+                    "answer": "Yes. Once your order is dispatched, you will receive tracking details so you can easily follow your shipment."
+                  }
+                ]
+              },
+              {
+                "title": "Returns & exchanges",
+                "faqs": [
+                  {
+                    "question": "Can I return or exchange my jewellery?",
+                    "answer": "Eligible products can be returned or exchanged according to our return and exchange policy. Please check the product-specific terms before placing your order."
+                  },
+                  {
+                    "question": "How do I initiate a return or exchange?",
+                    "answer": "You can request a return or exchange through your account/order section or contact our customer support team with your order details."
+                  }
+                ]
+              },
+              {
+                "title": "Custom Jewellery",
+                "faqs": [
+                  {
+                    "question": "Do you offer custom jewellery designs?",
+                    "answer": "Yes. We can help you create personalised jewellery based on your preferred design, gemstone, metal, size, and style. Contact our team to discuss your requirements."
+                  },
+                  {
+                    "question": "Can I customise a ring or necklace?",
+                    "answer": "Yes, selected designs can be customised. Availability depends on the jewellery design and requested modifications."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "metadata": {
+        "title": "FAQs",
+        "description": "Answers on jewellery, orders, delivery, returns, and custom designs."
+      }
+    },
+    {
+      "route": "/help",
+      "workflow": "@pradip1995/workflow-help",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-help",
+          "data": {
+            "shopName": "H.Ankit Jewels",
+            "title": "How can we help you?",
+            "subtitle": "Jewellery FAQs",
+            "heroBadge": "H.Ankit support",
+            "heroDescription": "Answers on jewellery care, sizing, orders, and returns — plus direct access to our team when you need a human touch.",
+            "contactInfo": {
+              "phone": "+91 22 4000 1200",
+              "email": "care@h-ankit.smartbytelabs.com",
+              "address": "H.Ankit Jewels, Mumbai, Maharashtra, India"
+            },
+            "dynamicFaqs": [
+              {
+                "category": "Products & care",
+                "icon": "💎",
+                "items": [
+                  {
+                    "q": "Are your diamonds and gemstones ethically sourced?",
+                    "a": "Yes. We use conflict-free, responsibly sourced diamonds and gemstones. Product pages list metal purity and stone details where available."
+                  },
+                  {
+                    "q": "How should I care for my jewellery?",
+                    "a": "Store pieces separately, avoid harsh chemicals and perfume spray on metal, and wipe gently with a soft cloth after wear. Lifetime shine warranty covers polish guidance for eligible pieces."
+                  },
+                  {
+                    "q": "How do I choose the right ring size?",
+                    "a": "Use our size guide on ring product pages, or visit a local jeweller for a precise measurement. Contact support if you need help selecting a size before purchase."
+                  },
+                  {
+                    "q": "Are H.Ankit Jewels products 100% authentic?",
+                    "a": "Yes. Every piece is crafted and quality-checked by our team before it reaches you."
+                  }
+                ]
+              },
+              {
+                "category": "Orders & delivery",
+                "icon": "🚚",
+                "items": [
+                  {
+                    "q": "When will I receive my order?",
+                    "a": "Orders typically ship within 1–2 business days. Delivery usually takes 3–5 business days across India; metro cities often arrive sooner."
+                  },
+                  {
+                    "q": "How can I track my order?",
+                    "a": "Once shipped, you will receive tracking via email and SMS. You can also view live status under My Orders in your account."
+                  },
+                  {
+                    "q": "Do you offer free shipping?",
+                    "a": "Yes — complimentary insured shipping on orders above ₹599. Fees for smaller orders are shown at checkout."
+                  },
+                  {
+                    "q": "Can I change my delivery address?",
+                    "a": "Contact us within 2 hours of placing your order if it has not shipped yet. After dispatch, address changes depend on the courier and your PIN code."
+                  }
+                ]
+              },
+              {
+                "category": "Returns & exchanges",
+                "icon": "↩️",
+                "items": [
+                  {
+                    "q": "What is your return window?",
+                    "a": "Eligible jewellery may be returned or exchanged within 7 days of delivery when unused and in original packaging. Custom or engraved pieces may be final sale."
+                  },
+                  {
+                    "q": "What if the size does not fit?",
+                    "a": "Contact us within 48 hours of delivery with your order number. We will arrange an exchange for an available size where possible."
+                  },
+                  {
+                    "q": "How do I initiate a return?",
+                    "a": "Open My Orders, select the order, and tap Return or Exchange. We schedule a doorstep pickup in most serviceable PIN codes within 2 business days."
+                  },
+                  {
+                    "q": "When will I receive my refund?",
+                    "a": "Refunds are processed within 5–7 business days after we receive and inspect the returned item, credited to your original payment method."
+                  }
+                ]
+              },
+              {
+                "category": "Payment & membership",
+                "icon": "💳",
+                "items": [
+                  {
+                    "q": "What payment methods do you accept?",
+                    "a": "Credit and debit cards, UPI, net banking, popular wallets, and Cash on Delivery (COD) on eligible PIN codes."
+                  },
+                  {
+                    "q": "Is Cash on Delivery available?",
+                    "a": "COD is available on eligible PIN codes and order values. Availability is confirmed at checkout."
+                  },
+                  {
+                    "q": "Is my payment information secure?",
+                    "a": "Yes. We use SSL encryption and a PCI-DSS compliant payment gateway. We never store your full card details on our servers."
+                  },
+                  {
+                    "q": "How do I get member offers?",
+                    "a": "Sign in with OTP to unlock member offers, faster checkout, and order tracking."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Help",
+        "description": "Get answers on jewellery care, orders, returns, and payments. Contact our support team for personalised help."
+      }
+    },
+    {
+      "route": "/privacy-policy",
+      "workflow": "@pradip1995/workflow-layout",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-privacy-policy",
+          "data": {
+            "kind": "privacy",
+            "contentFile": "content/legal/privacy-policy.json"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Privacy Policy",
+        "description": "Learn how H.Ankit Jewels collects, uses, and protects your personal information."
+      }
+    },
+    {
+      "route": "/returns-refund-policy",
+      "workflow": "@pradip1995/workflow-layout",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-privacy-policy",
+          "data": {
+            "kind": "returns",
+            "contentFile": "content/legal/returns-refund-policy.json"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Returns & Refunds",
+        "description": "How to return or exchange a H.Ankit Jewels order, and how refunds are processed."
+      }
+    },
+    {
+      "route": "/terms-of-use",
+      "workflow": "@pradip1995/workflow-layout",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-privacy-policy",
+          "data": {
+            "kind": "terms",
+            "contentFile": "content/legal/terms-of-use.json"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Terms of Use",
+        "description": "Terms that govern your use of the H.Ankit Jewels website and purchases from our store."
+      }
+    },
+    {
+      "route": "/orders/[id]",
+      "workflow": "@pradip1995/workflow-order",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        "@pradip1995/segment-order-details"
+      ],
+      "metadata": {
+        "title": "Order",
+        "description": "View your order details."
+      }
+    },
+    {
+      "route": "/order/[id]/confirmed",
+      "workflow": "@pradip1995/workflow-order",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-order-details",
+          "data": {
+            "view": "confirmed"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Order confirmed",
+        "description": "Your order has been placed."
+      }
+    },
+    {
+      "route": "/order/return/[id]",
+      "workflow": "@pradip1995/workflow-order",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-order-details",
+          "data": {
+            "view": "return"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Return",
+        "description": "Request a return for your order."
+      }
+    },
+    {
+      "route": "/order/exchange/[id]",
+      "workflow": "@pradip1995/workflow-order",
+      "layout": "@pradip1995/layout-default",
+      "segments": [
+        {
+          "package": "@pradip1995/segment-order-details",
+          "data": {
+            "view": "exchange"
+          }
+        }
+      ],
+      "metadata": {
+        "title": "Exchange",
+        "description": "Request an exchange for your order."
+      }
+    }
+  ]
+}

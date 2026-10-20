@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" role="img" aria-label="Lumière">
+  <text
+    x="0"
+    y="34"
+    fill="#ffffff"
+    font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+    font-size="36"
+    font-weight="500"
+    letter-spacing="0.14em"
+  >Lumière</text>
+  <line x1="0" y1="40" x2="200" y2="40" stroke="#c94b7a" stroke-width="1.5" opacity="0.85" />
+</svg>
